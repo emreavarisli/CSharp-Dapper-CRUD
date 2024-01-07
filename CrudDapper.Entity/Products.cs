@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CrudDapper.Entity
 {
+    [Table("Product")]
     public class Products
     {
         [Key]

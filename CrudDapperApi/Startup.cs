@@ -1,4 +1,5 @@
 ﻿using CrudDapper.Data;
+using CrudDapper.Data.Service;
 using Microsoft.OpenApi.Models;
 
 namespace CrudDapper.Api
@@ -24,7 +25,7 @@ namespace CrudDapper.Api
             var databaseSetting = new DatabaseSettings();
             Configuration.Bind(nameof(DatabaseSettings), databaseSetting);
             services.AddSingleton(databaseSetting);
-            //services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
